@@ -97,6 +97,8 @@ class TinyStoriesTokenizer:
 
 
     def tokenize(self, text):
+        # Normalize Windows / odd newlines: BPE vocab from corpus.txt is built without \\r; CSV fields may contain CR.
+        text = str(text).replace("\r\n", "\n").replace("\r", "\n")
         tokens = []
         pretokens = self._pretokenize(text)
         for word in pretokens:

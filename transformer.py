@@ -70,7 +70,6 @@ class Config:
     weight_decay: float = 1e-6
     no_of_epochs: int = 1
     num_labels: int = 2        # benign vs injection
-    pooling: str = "mean"      # "mean" (masked average) or "cls" (hidden at index 0)
     pad_token_id: int | None = None  # positions equal to this id are treated as padding
 
 
@@ -79,8 +78,6 @@ class BinaryClassifier(nn.Module):
 
     def __init__(self, config: Config) -> None:
         super().__init__()
-        if config.pooling not in ("mean", "cls"):
-            raise ValueError("config.pooling must be 'mean' or 'cls'")
         self.config = config
         self.embed = nn.Embedding(config.vocab_size, config.vector_dim)
         self.positional = nn.Parameter(
@@ -101,17 +98,11 @@ class BinaryClassifier(nn.Module):
         self.ln_f = nn.LayerNorm(config.vector_dim)
         self.classifier = nn.Linear(config.vector_dim, config.num_labels)
 
-    def _sequence_pool(
-        self,
-        hidden: torch.Tensor,
-        attention_mask: torch.Tensor | None,
-    ) -> torch.Tensor:
-        if self.config.pooling == "cls":
-            return hidden[:, 0, :]
+    @staticmethod
+    def _masked_mean_pool(hidden: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
         mask = attention_mask.float()
         mask_counts = mask.sum(dim=1).clamp(min=1.0)
-        pooled = (hidden * mask.unsqueeze(-1)).sum(dim=1) / mask_counts.unsqueeze(-1)
-        return pooled
+        return (hidden * mask.unsqueeze(-1)).sum(dim=1) / mask_counts.unsqueeze(-1)
 
     def forward(
         self,
@@ -130,6 +121,7 @@ class BinaryClassifier(nn.Module):
 
         Returns:
             Logits of shape ``(B, num_labels)`` — use with ``nn.CrossEntropyLoss``.
+        The sequence embedding is always a **masked mean** over non-padding positions.
         """
         _, S = x.shape
         if S > self.config.block_size:
@@ -157,7 +149,7 @@ class BinaryClassifier(nn.Module):
         for block in self.transformers:
             hidden = block(hidden, key_padding_mask=key_padding_mask)
 
-        pooled = self._sequence_pool(hidden, attention_mask)
+        pooled = self._masked_mean_pool(hidden, attention_mask)
         pooled = self.ln_f(pooled)
         return self.classifier(pooled)
 
