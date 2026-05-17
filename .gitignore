@@ -4,6 +4,11 @@
 data/corpus.txt
 data/tokenizer.json
 
+# Data pipeline (kept locally if you regenerate the dataset; not versioned here)
+dataset_merge.py
+scripts/build_merged_dataset.py
+scripts/build_final_dataset.py
+
 /assignment03/
 
 # Byte-compiled / cache
