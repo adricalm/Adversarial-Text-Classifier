@@ -1,0 +1,134 @@
+{
+  "row_counts": {
+    "total": 694,
+    "hf": 355,
+    "kaggle": 109,
+    "curated": 230
+  },
+  "labels": {
+    "overall": {
+      "0": 360,
+      "1": 334
+    },
+    "per_source": {
+      "hf": {
+        "0": 203,
+        "1": 152
+      },
+      "kaggle": {
+        "0": 87,
+        "1": 22
+      },
+      "curated": {
+        "0": 70,
+        "1": 160
+      }
+    }
+  },
+  "curated_only": {
+    "row_count": 230,
+    "by_category": {
+      "data_exfiltration": 22,
+      "hard_benign_instruction_words": 20,
+      "hard_benign_privacy": 10,
+      "hard_benign_security": 20,
+      "indirect_injection": 35,
+      "instruction_override": 33,
+      "jailbreak_roleplay": 27,
+      "normal_benign": 20,
+      "prompt_leakage": 26,
+      "rag_injection": 2,
+      "tool_manipulation": 15
+    },
+    "by_attack_type": {
+      "authority_spoofing": 1,
+      "authorization_fabrication": 1,
+      "classifier_evasion": 4,
+      "connected_source_exfiltration": 1,
+      "context_audit_exfiltration": 1,
+      "data_context_exfiltration": 1,
+      "data_exfiltration": 18,
+      "debug_framing": 1,
+      "debug_mode_exfiltration": 1,
+      "document_review_manipulation": 1,
+      "game_framing": 1,
+      "hidden_context_extraction": 1,
+      "hidden_markup_injection": 1,
+      "hidden_priority_override": 1,
+      "indirect_injection": 15,
+      "instruction_hierarchy_attack": 1,
+      "instruction_override": 26,
+      "jailbreak_roleplay": 20,
+      "memory_exfiltration": 1,
+      "metadata_exfiltration": 1,
+      "none": 70,
+      "obfuscated_prompt_extraction": 2,
+      "policy_bypass": 1,
+      "policy_override": 2,
+      "private_file_exfiltration": 1,
+      "prompt_leakage": 28,
+      "recommendation_manipulation": 1,
+      "role_authority_spoofing": 2,
+      "roleplay_prompt_extraction": 1,
+      "rule_inversion": 1,
+      "secret_exfiltration": 1,
+      "summary_manipulation": 1,
+      "task_manipulation": 4,
+      "tool_manipulation": 17
+    },
+    "by_difficulty": {
+      "easy": 36,
+      "hard": 78,
+      "medium": 116
+    },
+    "by_length_bucket": {
+      "long": 13,
+      "medium": 176,
+      "short": 41
+    },
+    "label_by_category": {
+      "data_exfiltration": {
+        "1": 22
+      },
+      "hard_benign_instruction_words": {
+        "0": 20
+      },
+      "hard_benign_privacy": {
+        "0": 10
+      },
+      "hard_benign_security": {
+        "0": 20
+      },
+      "indirect_injection": {
+        "1": 35
+      },
+      "instruction_override": {
+        "1": 33
+      },
+      "jailbreak_roleplay": {
+        "1": 27
+      },
+      "normal_benign": {
+        "0": 20
+      },
+      "prompt_leakage": {
+        "1": 26
+      },
+      "rag_injection": {
+        "1": 2
+      },
+      "tool_manipulation": {
+        "1": 15
+      }
+    }
+  },
+  "jsonl_input": {
+    "jsonl_path": "C:\\Users\\adria\\Desktop\\ML-KTH\\P4\\Language Engineering\\Adversarial-Text-Classifier\\data\\raw\\curated_prompt_injection_dataset_v1.jsonl",
+    "raw_line_count": 230,
+    "dropped_non_english": 0,
+    "dropped_bad_label": 0,
+    "dropped_missing_prompt": 0,
+    "rows_after_en_and_validation": 230
+  },
+  "duplicate_text_vs_base": 0
+}
