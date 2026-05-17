@@ -19,7 +19,3 @@ CUDA-enabled PyTorch is pinned via `pyproject.toml`. Use CPU wheels from PyPI in
 2. **`notebooks/manual_prompt_test.ipynb`** — Loads **`best_checkpoint.pt`** and **`data/tokenizer.json`** for ad hoc prompts.
 
 After a fresh clone you need either a local training run or a copied checkpoint + tokenizer. Model code lives in **`transformer.py`**, **`tokenizer.py`**, **`self_attention.py`**.
-
-## Public repository note
-
-`final_binary_dataset.csv` contains full prompt text. Confirm licensing and privacy expectations before a **public** repository.
