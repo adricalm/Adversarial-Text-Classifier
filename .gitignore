@@ -1,5 +1,9 @@
-# Local data (add your datasets here; not versioned)
-/data/
+# Local / bulky inputs and intermediates (final training CSV stays under data/final_dataset/)
+/data/raw/
+/data/derived/
+data/corpus.txt
+data/tokenizer.json
+
 /assignment03/
 
 # Byte-compiled / cache
