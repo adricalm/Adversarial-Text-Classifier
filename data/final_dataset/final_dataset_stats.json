@@ -1,14 +1,14 @@
 {
   "row_counts": {
-    "total": 694,
+    "total": 1233,
     "hf": 355,
     "kaggle": 109,
-    "curated": 230
+    "curated": 769
   },
   "labels": {
     "overall": {
-      "0": 360,
-      "1": 334
+      "0": 625,
+      "1": 608
     },
     "per_source": {
       "hf": {
@@ -20,75 +20,333 @@
         "1": 22
       },
       "curated": {
-        "0": 70,
-        "1": 160
+        "0": 335,
+        "1": 434
       }
     }
   },
   "curated_only": {
-    "row_count": 230,
+    "row_count": 769,
     "by_category": {
-      "data_exfiltration": 22,
+      "advice": 1,
+      "benign_advice": 2,
+      "benign_brainstorming": 3,
+      "benign_classification": 4,
+      "benign_description": 1,
+      "benign_documentation": 1,
+      "benign_email_summarization": 1,
+      "benign_explanation": 3,
+      "benign_formatting": 2,
+      "benign_generation": 1,
+      "benign_grammar": 1,
+      "benign_information_extraction": 1,
+      "benign_normal": 1,
+      "benign_planning": 7,
+      "benign_recipe": 1,
+      "benign_rewriting": 5,
+      "benign_security_discussion": 1,
+      "benign_sorting": 1,
+      "benign_summarization": 4,
+      "benign_support_ticket_analysis": 1,
+      "benign_tone_analysis": 1,
+      "benign_translation": 2,
+      "benign_webpage_summarization": 1,
+      "benign_writing": 9,
+      "career_advice": 6,
+      "cooking": 4,
+      "creative_writing": 3,
+      "data_exfiltration": 23,
+      "direct_injection": 75,
+      "economics": 1,
+      "economics_basics": 1,
+      "education": 7,
+      "education_advice": 1,
+      "email_writing": 1,
+      "event_planning": 1,
+      "everyday_science": 11,
+      "factual_curiosity": 7,
+      "factual_qa": 4,
+      "family_advice": 1,
+      "finance_basics": 2,
+      "fitness": 1,
+      "gardening": 1,
+      "hard_benign_instruction_following": 1,
       "hard_benign_instruction_words": 20,
       "hard_benign_privacy": 10,
       "hard_benign_security": 20,
-      "indirect_injection": 35,
-      "instruction_override": 33,
+      "hard_benign_security_discussion": 20,
+      "health": 4,
+      "health_pet": 1,
+      "health_science": 3,
+      "history": 11,
+      "how_to": 3,
+      "indirect_injection": 155,
+      "instruction_override": 53,
+      "interpersonal": 1,
+      "interpersonal_advice": 2,
+      "jailbreak": 22,
       "jailbreak_roleplay": 27,
+      "learning": 1,
+      "life_advice": 3,
+      "life_reflection": 2,
+      "lifestyle": 10,
+      "linguistics": 4,
+      "mental_health": 1,
+      "mental_health_general": 1,
+      "mindfulness": 1,
+      "mythology": 2,
       "normal_benign": 20,
+      "pet_care": 2,
+      "planning": 1,
+      "policy_override": 2,
       "prompt_leakage": 26,
+      "prompt_leaking": 11,
+      "psychology": 7,
+      "psychology_basics": 6,
+      "psychology_behavior": 2,
       "rag_injection": 2,
-      "tool_manipulation": 15
+      "reading": 1,
+      "recommendation": 1,
+      "relationship_advice": 2,
+      "role_override": 4,
+      "role_play": 13,
+      "social_dynamics": 1,
+      "standard_query": 50,
+      "story_craft": 9,
+      "tech_basics": 1,
+      "tech_support": 1,
+      "tool_manipulation": 21,
+      "translation": 1,
+      "writing_assistance": 2
     },
     "by_attack_type": {
+      "audit_pretext_extraction": 1,
+      "authority_claim": 3,
       "authority_spoofing": 1,
       "authorization_fabrication": 1,
+      "behavior_hijack": 3,
+      "chat_history_exfiltration": 1,
       "classifier_evasion": 4,
+      "combined_prompt_leak_and_exfiltration": 1,
+      "confidentiality_bypass": 2,
+      "configuration_extraction": 2,
       "connected_source_exfiltration": 1,
+      "constraint_bypass": 1,
       "context_audit_exfiltration": 1,
+      "credential_exfiltration": 3,
       "data_context_exfiltration": 1,
-      "data_exfiltration": 18,
+      "data_exfiltration": 43,
       "debug_framing": 1,
       "debug_mode_exfiltration": 1,
+      "debug_mode_extraction": 2,
+      "direct_command": 11,
       "document_review_manipulation": 1,
+      "false_entitlement": 1,
+      "false_update": 2,
+      "filter_removal": 6,
+      "formatting_based_extraction": 1,
       "game_framing": 1,
-      "hidden_context_extraction": 1,
+      "game_wrapper_extraction": 1,
+      "guideline_removal": 2,
+      "hidden_context_extraction": 6,
       "hidden_markup_injection": 1,
       "hidden_priority_override": 1,
       "indirect_injection": 15,
+      "indirect_policy_extraction": 1,
+      "instruction_extraction": 1,
       "instruction_hierarchy_attack": 1,
-      "instruction_override": 26,
+      "instruction_hierarchy_bypass": 1,
+      "instruction_override": 57,
+      "instruction_priority_attack": 1,
       "jailbreak_roleplay": 20,
       "memory_exfiltration": 1,
+      "memory_extraction": 1,
       "metadata_exfiltration": 1,
-      "none": 70,
+      "mode_switch": 7,
+      "multimodal_context_injection": 1,
+      "none": 335,
+      "obfuscated_extraction": 2,
       "obfuscated_prompt_extraction": 2,
+      "paraphrased_extraction": 1,
+      "partial_hidden_context_extraction": 1,
+      "persona_adoption": 16,
+      "persona_replacement": 4,
       "policy_bypass": 1,
-      "policy_override": 2,
+      "policy_extraction": 3,
+      "policy_override": 8,
+      "priority_override": 3,
+      "privacy_boundary_violation": 1,
+      "privacy_bypass": 1,
+      "private_data_exposure": 1,
+      "private_data_insertion": 1,
       "private_file_exfiltration": 1,
+      "privilege_escalation": 7,
       "prompt_leakage": 28,
+      "prompt_leaking": 31,
       "recommendation_manipulation": 1,
+      "restriction_bypass": 31,
       "role_authority_spoofing": 2,
+      "role_override": 1,
+      "role_reassignment": 2,
+      "roleplay_extraction": 1,
       "roleplay_prompt_extraction": 1,
       "rule_inversion": 1,
       "secret_exfiltration": 1,
+      "simple_override": 22,
+      "stealth_data_exfiltration": 1,
+      "stealth_task_hijacking": 1,
       "summary_manipulation": 1,
+      "system_prompt_extraction": 3,
+      "task_hijacking": 2,
       "task_manipulation": 4,
-      "tool_manipulation": 17
+      "task_replacement": 1,
+      "tool_discovery_and_misuse": 1,
+      "tool_manipulation": 25,
+      "trust_escalation": 1,
+      "unauthorized_calendar_access": 1,
+      "unauthorized_email_draft": 1,
+      "unauthorized_tool_use": 2
     },
     "by_difficulty": {
       "easy": 36,
       "hard": 78,
-      "medium": 116
+      "low": 266,
+      "medium": 389
     },
     "by_length_bucket": {
-      "long": 13,
-      "medium": 176,
-      "short": 41
+      "long": 91,
+      "medium": 484,
+      "short": 194
     },
     "label_by_category": {
+      "advice": {
+        "0": 1
+      },
+      "benign_advice": {
+        "0": 2
+      },
+      "benign_brainstorming": {
+        "0": 3
+      },
+      "benign_classification": {
+        "0": 4
+      },
+      "benign_description": {
+        "0": 1
+      },
+      "benign_documentation": {
+        "0": 1
+      },
+      "benign_email_summarization": {
+        "0": 1
+      },
+      "benign_explanation": {
+        "0": 3
+      },
+      "benign_formatting": {
+        "0": 2
+      },
+      "benign_generation": {
+        "0": 1
+      },
+      "benign_grammar": {
+        "0": 1
+      },
+      "benign_information_extraction": {
+        "0": 1
+      },
+      "benign_normal": {
+        "0": 1
+      },
+      "benign_planning": {
+        "0": 7
+      },
+      "benign_recipe": {
+        "0": 1
+      },
+      "benign_rewriting": {
+        "0": 5
+      },
+      "benign_security_discussion": {
+        "0": 1
+      },
+      "benign_sorting": {
+        "0": 1
+      },
+      "benign_summarization": {
+        "0": 4
+      },
+      "benign_support_ticket_analysis": {
+        "0": 1
+      },
+      "benign_tone_analysis": {
+        "0": 1
+      },
+      "benign_translation": {
+        "0": 2
+      },
+      "benign_webpage_summarization": {
+        "0": 1
+      },
+      "benign_writing": {
+        "0": 9
+      },
+      "career_advice": {
+        "0": 6
+      },
+      "cooking": {
+        "0": 4
+      },
+      "creative_writing": {
+        "0": 3
+      },
       "data_exfiltration": {
-        "1": 22
+        "1": 23
+      },
+      "direct_injection": {
+        "1": 75
+      },
+      "economics": {
+        "0": 1
+      },
+      "economics_basics": {
+        "0": 1
+      },
+      "education": {
+        "0": 7
+      },
+      "education_advice": {
+        "0": 1
+      },
+      "email_writing": {
+        "0": 1
+      },
+      "event_planning": {
+        "0": 1
+      },
+      "everyday_science": {
+        "0": 11
+      },
+      "factual_curiosity": {
+        "0": 7
+      },
+      "factual_qa": {
+        "0": 4
+      },
+      "family_advice": {
+        "0": 1
+      },
+      "finance_basics": {
+        "0": 2
+      },
+      "fitness": {
+        "0": 1
+      },
+      "gardening": {
+        "0": 1
+      },
+      "hard_benign_instruction_following": {
+        "0": 1
       },
       "hard_benign_instruction_words": {
         "0": 20
@@ -99,36 +357,147 @@
       "hard_benign_security": {
         "0": 20
       },
+      "hard_benign_security_discussion": {
+        "0": 20
+      },
+      "health": {
+        "0": 4
+      },
+      "health_pet": {
+        "0": 1
+      },
+      "health_science": {
+        "0": 3
+      },
+      "history": {
+        "0": 11
+      },
+      "how_to": {
+        "0": 3
+      },
       "indirect_injection": {
-        "1": 35
+        "1": 155
       },
       "instruction_override": {
-        "1": 33
+        "1": 53
+      },
+      "interpersonal": {
+        "0": 1
+      },
+      "interpersonal_advice": {
+        "0": 2
+      },
+      "jailbreak": {
+        "1": 22
       },
       "jailbreak_roleplay": {
         "1": 27
       },
+      "learning": {
+        "0": 1
+      },
+      "life_advice": {
+        "0": 3
+      },
+      "life_reflection": {
+        "0": 2
+      },
+      "lifestyle": {
+        "0": 10
+      },
+      "linguistics": {
+        "0": 4
+      },
+      "mental_health": {
+        "0": 1
+      },
+      "mental_health_general": {
+        "0": 1
+      },
+      "mindfulness": {
+        "0": 1
+      },
+      "mythology": {
+        "0": 2
+      },
       "normal_benign": {
         "0": 20
+      },
+      "pet_care": {
+        "0": 2
+      },
+      "planning": {
+        "0": 1
+      },
+      "policy_override": {
+        "1": 2
       },
       "prompt_leakage": {
         "1": 26
       },
+      "prompt_leaking": {
+        "1": 11
+      },
+      "psychology": {
+        "0": 7
+      },
+      "psychology_basics": {
+        "0": 6
+      },
+      "psychology_behavior": {
+        "0": 2
+      },
       "rag_injection": {
         "1": 2
       },
+      "reading": {
+        "0": 1
+      },
+      "recommendation": {
+        "0": 1
+      },
+      "relationship_advice": {
+        "0": 2
+      },
+      "role_override": {
+        "1": 4
+      },
+      "role_play": {
+        "1": 13
+      },
+      "social_dynamics": {
+        "0": 1
+      },
+      "standard_query": {
+        "0": 50
+      },
+      "story_craft": {
+        "0": 9
+      },
+      "tech_basics": {
+        "0": 1
+      },
+      "tech_support": {
+        "0": 1
+      },
       "tool_manipulation": {
-        "1": 15
+        "1": 21
+      },
+      "translation": {
+        "0": 1
+      },
+      "writing_assistance": {
+        "0": 2
       }
     }
   },
   "jsonl_input": {
     "jsonl_path": "C:\\Users\\adria\\Desktop\\ML-KTH\\P4\\Language Engineering\\Adversarial-Text-Classifier\\data\\raw\\curated_prompt_injection_dataset_v1.jsonl",
-    "raw_line_count": 230,
+    "raw_line_count": 769,
     "dropped_non_english": 0,
     "dropped_bad_label": 0,
     "dropped_missing_prompt": 0,
-    "rows_after_en_and_validation": 230
+    "rows_after_en_and_validation": 769
   },
-  "duplicate_text_vs_base": 0
+  "duplicate_text_vs_base": 1
 }
