@@ -11,7 +11,8 @@ dependencies = [
     "torch>=2.12.0",
     "jupyter",
     "notebook",
-    "matplotlib"
+    "matplotlib",
+    "transformers"
 ]
 
 [dependency-groups]
